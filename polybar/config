@@ -60,8 +60,7 @@ font-2 = Font Awesome 5 Free Solid:size=12;3
 font-3 = Font Awesome 5 Brands Regular:size=12;3
 font-4 = fontello:size=12:style=Regular;3
 modules-left = spotify 
-;modules-center = 
-;modules-right = ögt
+modules-right = ögt
 wm-restack = i3
 override-redirect = true
 
@@ -107,6 +106,7 @@ label-padding-left = 4
 [module/spotify]
 type = custom/script
 interval = 3
+format-foreground = ${colors.foreground-alt}
 format-prefix = " "
 format-prefix-foreground = ${colors.green}
 format = <label>
@@ -117,23 +117,18 @@ format-prefix-padding-left = 4
 type = custom/script
 interval = 300 
 format-prefix = " "
-format-prefix-foreground = $(colors.red)
-
-[module/memory]
-type = internal/memory
-interval = 5 
-format-prefix = "ram: "
-format-prefix-foreground = ${colors.foreground}
-format-foreground = ${colors.foreground}
-label = %percentage_used% %
+format-prefix-foreground = ${colors.red}
+format-foreground = ${colors.foreground-alt}
+format = <label>
+exec = python3 ~/.config/polybar/scripts/ögt.py
 label-padding-right = 4
 
 [module/cpu]
 type = internal/cpu
 interval = 5
 format-prefix = "cpu: "
-format-prefix-foreground = ${colors.foreground}
-format-foreground = ${colors.foreground}
+format-prefix-foreground = ${colors.foreground-alt}
+format-foreground = ${colors.foreground-alt}
 label = %percentage% %
 label-padding-right = 4
 

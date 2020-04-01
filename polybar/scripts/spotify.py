@@ -38,7 +38,6 @@ parser.add_argument(
     dest='play_pause_font'
 )
 
-
 args = parser.parse_args()
 
 def fix_string(string):
@@ -50,7 +49,7 @@ def fix_string(string):
 
 # Default parameters
 output = fix_string(u'{play_pause} {artist}: {song}')
-trunclen = 25
+trunclen = 19
 play_pause = fix_string(u'\u25B6,\u23F8') # first character is play, second is paused
 
 label_with_font = '%{{T{font}}}{label}%{{T-}}'
