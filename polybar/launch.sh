@@ -9,4 +9,4 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 # Launch Polybar, using default config location ~/.config/polybar/config
 echo "---" | tee -a /tmp/polybar1.log /tmp/polybar2.log
 polybar middle >>/tmp/polybar1.log 2>&1 &
-# polybar middle >>/tmp/polybar2.log 2>&1 &
+polybar misc >>/tmp/polybar2.log 2>&1 &
