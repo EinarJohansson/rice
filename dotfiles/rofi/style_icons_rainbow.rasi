@@ -1,0 +1,103 @@
+/*
+ *
+ * Author : Aditya Shakya (adi1090x)
+ * Mail : adi1090x@gmail.com
+ * Github : @adi1090x
+ * Reddit : @adi1090x
+ *
+ */
+
+configuration {
+	location: 0;
+	yoffset: 0;
+  xoffset: 0;	
+	fake-transparency: false;
+	hide-scrollbar: true;
+	bw: 0;
+  fullscreen: false;
+  show-icons: true;
+	sidebar-mode: false;
+}
+
+/* colors */
+* {
+red: #c0c3c8;
+blue: #25B1CA;
+green: #2ABB9C;
+purple: #5537D2;
+}
+
+// black
+* {
+bg: #d2cbc5dd;
+bg-sel: #cdc1b666;
+fg: #0f1d20;
+}
+
+// white
+/*
+* {
+bg: #ffffffa6;
+bg-sel: #ffffff8c;
+fg: #ffffff;
+}
+*/
+
+* {
+  background-color: #00000000;
+  font: "SF Pro Display 25";
+}
+
+window {
+  height: 40%;
+  width: 50%;
+  transparency: "real";
+}
+
+mainbox {
+  children: [ inputbar, listview ];
+  padding: 0% 0% 0% 0%;
+  background-color: @bg;
+  border: 0;
+  border-radius: 8;
+  border-color: @bg;
+}
+
+listview {
+  columns: 1;
+  padding: 4;
+  spacing: 5;
+}
+
+element {
+  border: 0;
+  text-color: @fg;
+  orientation: vertical;
+  padding: 12 12 12 20;
+  border-radius: 8;
+}
+
+element selected {
+  background-color: @bg-sel;
+  border-color: @bg;
+  text-color: @fg;
+}
+
+inputbar {
+  children: [entry];
+  padding: 4 4 4 4;
+  /* change this colors to change inputbar color*/
+  background-color: @red;
+  border: 0 0 0 0;
+  border-color: @fg;
+}
+
+prompt {
+  enabled: false;
+}
+
+entry {
+  font: "SF Pro Display 20";
+  text-color: @fg;
+  padding: 8 12 8 12;
+}
