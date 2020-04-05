@@ -2,7 +2,7 @@
 My personal .files :)
 
 ## TODO
-- [ ] Add third bar
-  - [ ] Bluetooth
+- [x] Add third bar
+  - [x] Bluetooth
 - [ ] Configure startup applicaitons
 - [ ] Update startpage
