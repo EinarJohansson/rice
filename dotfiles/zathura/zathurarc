@@ -1,0 +1,11 @@
+###########
+#Bookmarks#
+###########
+
+# Create bookmark
+map bm feedkeys :bmark<Space>
+# List the bookmarks
+map bl feedkeys :blist<Return>
+# Delete bookmark 
+map bd feedkeys :bdelete<Space>
+
