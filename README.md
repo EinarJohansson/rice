@@ -1,8 +1,4 @@
 # dotfiles
 My personal .files :)
 
-## TODO
-- [x] Add third bar
-  - [x] Bluetooth
-- [ ] Configure startup applicaitons
-- [ ] Update startpage
+![alt text](https://github.com/EinarJohansson/rice/blob/master/Screenshot.png?raw=true)
