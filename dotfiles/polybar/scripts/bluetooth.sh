@@ -5,7 +5,7 @@ MACS=$(hcitool con | grep -o '[[:xdigit:]:]\{11,17\}' | tr " " "\n")
 
 if [ -z "$MACS" ]
     then
-    echo "Not connected"
+    echo "%{F#7a7873}"
 else
-    echo "Connected"
+    echo "%{F#555}"
 fi

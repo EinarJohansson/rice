@@ -10,7 +10,4 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 echo "---" | tee -a /tmp/polybar1.log /tmp/polybar2.log
 polybar middle >>/tmp/polybar1.log 2>&1 &
 polybar misc >>/tmp/polybar2.log 2>&1 &
-<<<<<<< HEAD
 polybar system >> /tmp/polybar3.log 2>&1 &
-=======
->>>>>>> 3b34b6b52b435d1df3ca7fd78ef6342eb44ff1d5

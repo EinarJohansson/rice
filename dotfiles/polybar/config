@@ -20,9 +20,8 @@ primary = #ffb52a
 red = #e00e1c
 green = #1db954
 
-<<<<<<< HEAD
 [bar/misc]
-width = 15%
+width = 8%
 height = 35
 offset-x = 2.7% 
 radius = 10
@@ -36,18 +35,16 @@ font-0 = SF Pro Display:size=12:style=Light;3
 font-1 = Font Awesome 5 Free Regular:size=12;3
 font-2 = Font Awesome 5 Free Solid:size=12;3
 font-3 = Font Awesome 5 Brands Regular:size=12;3
-;font-4 = fontello:size=12:style=Regular;3
-modules-left = spotify 
-modules-right = pulseaudio
+modules-left = date
 wm-restack = i3
 override-redirect = true
+monitor = HDMI-0
 
-=======
->>>>>>> 3b34b6b52b435d1df3ca7fd78ef6342eb44ff1d5
 [bar/middle]
-width = 25%
+width = 40%
 height = 35
-offset-x = 37.5% 
+monitor = HDMI-0
+offset-x = 30% 
 radius = 10
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -59,33 +56,19 @@ font-0 = SF Pro Display:size=12:style=Light;3
 font-1 = Font Awesome 5 Free Regular:size=10;3
 font-2 = Font Awesome 5 Free Solid:size=10;3
 font-3 = Font Awesome 5 Brands Regular:size=10;3
-<<<<<<< HEAD
 font-4 = fontello:size=12:style=Regular;3
 wm-restack = i3
 modules-center = i3
-modules-left = date
-modules-right = ögt
-=======
-wm-restack = i3
-modules-center = i3
-modules-left = date
-modules-right = cpu
->>>>>>> 3b34b6b52b435d1df3ca7fd78ef6342eb44ff1d5
+modules-left = spotify 
+modules-right = pulseaudio
 override-redirect = true
 cursor-click = pointer
 cursor-scroll = ns-resize
 
-<<<<<<< HEAD
 [bar/system]
-width = 11%
+width = 8%
 height = 35
-offset-x = 86.2%
-=======
-[bar/misc]
-width = 15%
-height = 35
-offset-x = 35 
->>>>>>> 3b34b6b52b435d1df3ca7fd78ef6342eb44ff1d5
+offset-x = 89%
 radius = 10
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -98,18 +81,12 @@ font-1 = Font Awesome 5 Free Regular:size=12;3
 font-2 = Font Awesome 5 Free Solid:size=12;3
 font-3 = Font Awesome 5 Brands Regular:size=12;3
 font-4 = fontello:size=12:style=Regular;3
-<<<<<<< HEAD
 modules-left = bluetooth 
 modules-right = cpu
 wm-restack = i3
 override-redirect = true
 enable-ipc = true
-=======
-modules-left = spotify 
-modules-right = ögt
-wm-restack = i3
-override-redirect = true
->>>>>>> 3b34b6b52b435d1df3ca7fd78ef6342eb44ff1d5
+monitor = HDMI-0
 
 [module/i3]
 type = internal/i3
@@ -138,7 +115,12 @@ label-focused-padding = 2
 label-unfocused = %icon% 
 label-unfocused-padding = 2
 label-unfocused-background = ${colors.background}
-
+; Another workspace active
+label-visible = %icon%
+label-visible-padding = 2
+;urgent
+label-urgent = %icon%
+label-urgent-padding = 2
 [module/date]
 type = internal/date
 interval = 10 
@@ -160,20 +142,6 @@ format = <label>
 exec = python3 ~/.config/polybar/scripts/spotify.py -f '{song}'
 format-prefix-padding-left = 4
 
-[module/ögt]
-type = custom/script
-<<<<<<< HEAD
-interval = 60
-=======
-interval = 300 
->>>>>>> 3b34b6b52b435d1df3ca7fd78ef6342eb44ff1d5
-format-prefix = " "
-format-prefix-foreground = ${colors.red}
-format-foreground = ${colors.foreground-alt}
-format = <label>
-exec = python3 ~/.config/polybar/scripts/ögt.py
-label-padding-right = 4
-
 [module/cpu]
 type = internal/cpu
 interval = 5
@@ -183,15 +151,14 @@ format-foreground = ${colors.foreground-alt}
 label = %percentage% %
 label-padding-right = 4
 
-<<<<<<< HEAD
 [module/bluetooth]
 type = custom/script
 interval = 5
-format-prefix = " "
+;format-prefix = " "
 format = <label>
 exec = ~/.config/polybar/scripts/bluetooth.sh
-format-prefix-padding-left = 4
-format-foreground = ${colors.foreground-alt}
+label-padding-left = 4
+;format-foreground = ${colors.foreground-alt}
 
 [module/pulseaudio]
 type = internal/pulseaudio
@@ -211,7 +178,5 @@ ramp-volume-1 = 
 ramp-volume-2 = 
 format-foreground = ${colors.foreground-alt}
 
-=======
->>>>>>> 3b34b6b52b435d1df3ca7fd78ef6342eb44ff1d5
 [settings]
 screenchange-reload = true
